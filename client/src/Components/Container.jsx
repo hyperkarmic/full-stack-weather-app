@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import WeatherForm from "./WeatherForm";
-import WeatherPanels from "./weatherPanels";
+import WeatherPanels from "./WeatherPanels";
 
 class Container extends Component {
     state = {
