@@ -2,10 +2,10 @@ import React, {Component} from "react";
 
 class WeatherInfoPanel extends Component {
 
-    render () {
+    render() {
         return (
             <section className="weather-info">
-                <h3 className="ciy-name">City Name</h3>
+                <h3 className="city-name">City Name</h3>
 
                 <section className="overcast">
                     <img src="" className="overcast-img" alt=""/>

@@ -12,7 +12,7 @@ class WeatherHistoryPanel extends Component {
                 "description": "clear sky"
             },
             {
-                "timestamp": "7/27/220, 11:10:36 PM",
+                "timestamp": "7/27/2020, 11:10:36 PM",
                 "city": "Redmond",
                 "zipcode": "98052",
                 "temperature": 73.67,
@@ -26,34 +26,34 @@ class WeatherHistoryPanel extends Component {
         let historyList = this.state.history;
 
         // Listing history of zip code submissions in "most recent" order
-        for (let i= historyList.length - 1; i >= 0; i--) {
+        for (let i = historyList.length - 1; i >= 0; i--) {
             let infoCard = this.getInfoListItem(historyList[i]);
             historyComponents.push(infoCard);
         }
-    
-    return (
-        <Card>
-            <ListGroup variant="flush">
-                {historyComponents}
-            </ListGroup>
-        </Card>
-    );
-}
 
-getInfoListItem = (info) => {
-    return (
-        <ListGroup.Item><b>{info.timestamp}</b> -
-        [{info.city}, {info.zipcode}]:[{info.temperature}, {info.description}]</ListGroup.Item>
-    );
-}
+        return (
+            <Card>
+                <ListGroup variant="flush">
+                    {historyComponents}
+                </ListGroup>
+            </Card>
+        );
+    }
 
-render() {
-    return (
-        <section className="weather-history-panel">
-            {!!this.state.history.length ? this.createHistoryList() : "No History!"}
-        </section>
-    );
-  }
+    getInfoListItem = (info) => {
+        return (
+            <ListGroup.Item><b>{info.timestamp}</b> -
+                [{info.city}, {info.zipcode}]:[{info.temperature}, {info.description}]</ListGroup.Item>
+        );
+    }
+
+    render() {
+        return (
+            <section className="weather-history-panel">
+                {!!this.state.history.length ? this.createHistoryList() : "No History!"}
+            </section>
+        );
+    }
 }
 
 export default WeatherHistoryPanel;
